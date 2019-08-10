@@ -4,4 +4,4 @@ title = "JavaScriptに関するお知らせ"
 theme = "hugo_theme_robust"
 
 [outputs]
-page = [ "AMP" ]
+page = [ "HTML", "AMP" ]
