@@ -1,4 +1,7 @@
 baseURL = "https://hugoamp.netlify.com/"
 languageCode = "ja"
-title = "My New Hugo Site"
+title = "JavaScriptに関するお知らせ"
 theme = "hugo_theme_robust"
+
+[outputs]
+page = [ "HTML", "AMP" ]
