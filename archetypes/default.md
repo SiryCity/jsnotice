@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: ""
+date: "{{ .File.BaseFileName }}"
 draft: false
 url: "posts/{{.File.BaseFileName}}"
 tags: ['JavaScript',]
