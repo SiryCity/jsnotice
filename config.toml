@@ -6,3 +6,12 @@ theme = "hugo_theme_robust"
 [outputs]
 home = [ "HTML", "AMP" ]
 page = [ "HTML", "AMP" ]
+
+
+[params.author]
+  thumbnail = "images/icon.svg"
+  name = "Ryuto MIZUTANI"
+  description = '名古屋発Webエンジニア'
+  twitter  = "https://twitter.com/sirycity"
+  github   = "https://github.com/SiryCity"
+  mail     = "sirycity2018@gmail.com"

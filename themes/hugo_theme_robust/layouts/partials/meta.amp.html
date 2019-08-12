@@ -7,6 +7,7 @@
 {{ hugo.Generator }}
 
 <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/logo.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}favicon.ico">
 
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title | safeHTML }}">
