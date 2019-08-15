@@ -7,3 +7,14 @@
 .logo > a {
   color: #ddd;
 }
+
+
+time {
+  height: 12px;
+  line-height: 12px;
+  color: black;
+  font-size: 12px;
+  padding: 0 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}

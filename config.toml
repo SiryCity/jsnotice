@@ -9,6 +9,7 @@ page = [ "HTML", "AMP" ]
 
 
 [params]
+description = "JavaScriptに関するブログ。著者のJavaScript、CSS、Pythonなど様々な情報をご覧いただけます。"
 dateformat = "2006-01-02"
 
 [params.author]
@@ -18,3 +19,6 @@ dateformat = "2006-01-02"
   twitter  = "https://twitter.com/sirycity"
   github   = "https://github.com/SiryCity"
   mail     = "sirycity2018@gmail.com"
+
+[taxonomies]
+  tag = "tags"
