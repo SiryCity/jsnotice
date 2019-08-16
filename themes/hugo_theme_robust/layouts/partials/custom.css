@@ -28,16 +28,16 @@
   border: 1px solid #ccc;
 }
 
-.terms .tags{
-  height: 12px;
-  line-height: 12px;
-  color: black;
-  font-size: 12px;
-  padding: 0 12px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 0;
+.tags{
+  height: 12px !important;
+  line-height: 12px !important;
+  color: black !important;
+  font-size: 12px !important;
+  padding: 0 12px !important;
+  display: inline-block !important;
+  border: 1px solid #ccc !important;
+  background: white !important;
+  border-radius: 0 !important;
 }
 
 section.sidebar > header{
