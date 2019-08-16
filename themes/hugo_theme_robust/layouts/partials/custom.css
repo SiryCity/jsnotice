@@ -1,15 +1,23 @@
 .l-header {
-  height: 73px;
+  height: 110px;
   box-shadow: 0px 9px 3px -3px rgba(128,128,128,0.5);
   background: linear-gradient(#0073c2, #02609F);
+  padding: 0;
 }
-
+.l-header > .l-container {
+  height: 100%;
+}
+.logo{
+  padding-top: 25px;
+}
 .logo > a {
   color: #ddd;
 }
+.description{
+  color: #ddd;
+}
 
-
-time {
+.posted-time {
   height: 12px;
   line-height: 12px;
   color: black;
@@ -17,4 +25,33 @@ time {
   padding: 0 12px;
   display: inline-block;
   border: 1px solid #ccc;
+}
+
+.terms .tags{
+  height: 12px;
+  line-height: 12px;
+  color: black;
+  font-size: 12px;
+  padding: 0 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 0;
+}
+
+section.sidebar > header{
+  color: #0475C2;
+  font-size: 20px;
+  height: 41px;
+  line-height: 50px;
+  border-bottom: 2.2px solid #0475c2;
+  margin-bottom: 5px;
+  font-family: serif;
+  font-weight: bold; 
+  display: inline-block;
+  letter-spacing: 0;
+}
+
+section.sidebar > header::first-letter{
+  font-size: 40px;
 }

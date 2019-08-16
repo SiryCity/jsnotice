@@ -40,8 +40,9 @@
     <header class="l-header">
       <div class="l-container">
         <div class="logo">
-          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+          <a href="{{ .Site.BaseURL }}/amp">{{ .Site.Title }}</a>
         </div>
+        {{ partial "description.html" . }}
       </div>
     </header>
 
