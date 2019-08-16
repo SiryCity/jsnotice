@@ -17,6 +17,7 @@
   color: #ddd;
 }
 
+
 .posted-time {
   height: 12px;
   line-height: 12px;
@@ -51,7 +52,10 @@ section.sidebar > header{
   display: inline-block;
   letter-spacing: 0;
 }
-
 section.sidebar > header::first-letter{
   font-size: 40px;
+}
+
+article.lism {
+  margin: 0;
 }
