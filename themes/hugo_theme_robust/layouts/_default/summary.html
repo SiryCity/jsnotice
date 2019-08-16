@@ -3,6 +3,19 @@
   <div class="thumb thumb-{{ .File.UniqueID }}"></div>
 
   <header class="article-header">
+
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="{{ .Site.BaseURL }}"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+            {{ with .Section }}
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ . | upper }}</span></a></li>
+            {{ end }}
+            <li class="active">{{ .Title }}</li>
+          </ol>
+        </nav>
+      </div>
+
     <h1 class="title">{{ .Title }}</h1>
 
     <ul class="facts">
@@ -14,6 +27,25 @@
       {{ if .IsDraft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
       {{ end }}
     </ul>
+
+
+    {{ $params := .Params }}
+    {{ range $key, $value := $.Site.Taxonomies }}
+    {{ if isset $params $key }}
+    <section class="footer">
+      <header>
+        <a href="{{ $.Site.BaseURL }}{{ $key | urlize }}/">{{ $key | upper }}</a>
+      </header>
+      <div>
+        <ul class="terms">
+          {{ range (index $params $key) }}
+          <li><a href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </section>
+    {{ end }}
+    {{ end }}
 
     {{ partial "share.html" . }}
   </header>
@@ -34,7 +66,7 @@
       <div>
         <nav class="crumb">
           <ol>
-            <li><a href="{{ .Site.BaseURL }}"><i class="fas fa-home" aria-hidden="true"></i>TOP</a></li>
+            <li><a href="{{ .Site.BaseURL }}"><i class="fas fa-home" aria-hidden="true"></i></a></li>
             {{ with .Section }}
             <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ . | upper }}</span></a></li>
             {{ end }}
@@ -43,24 +75,6 @@
         </nav>
       </div>
     </section>
-
-    {{ $params := .Params }}
-    {{ range $key, $value := $.Site.Taxonomies }}
-    {{ if isset $params $key }}
-    <section class="footer">
-      <header>
-        <a href="{{ $.Site.BaseURL }}{{ $key | urlize }}/">{{ $key | upper }}</a>
-      </header>
-      <div>
-        <ul class="terms">
-          {{ range (index $params $key) }}
-          <li><a href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-    </section>
-    {{ end }}
-    {{ end }}
   </footer>
 
 </article>
