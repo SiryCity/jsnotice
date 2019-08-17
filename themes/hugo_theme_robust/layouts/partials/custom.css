@@ -56,6 +56,18 @@ section.sidebar > header::first-letter{
   font-size: 40px;
 }
 
-article.lism {
-  margin: 0;
+.latestbox{
+  margin-top: 10px !important;
+}
+
+.lilatests{
+  margin: 0 !important;
+  border-radius: 0;
+}
+
+
+.latestbox .thumb{
+  background-size: 80% 80% !important;
+  background-repeat: no-repeat;
+  background-position: center;
 }

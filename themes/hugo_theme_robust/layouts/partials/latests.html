@@ -1,9 +1,9 @@
 <section class="sidebar">
   <header>LATESTS</header>
   <div>
-    <div class="articles sm">
+    <div class="articles sm latestbox">
       {{ range $i, $p := (first 10 .Site.RegularPages) }}
-      {{ .Render "li_sm" }}
+      {{ .Render "li_latests" }}
       {{ end }}
     </div>
   </div>
