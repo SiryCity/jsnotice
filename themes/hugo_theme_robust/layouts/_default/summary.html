@@ -26,23 +26,18 @@
       <li>{{ .WordCount }} Words</li>
       {{ if .IsDraft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
       {{ end }}
-    </ul>
 
 
     {{ $params := .Params }}
     {{ range $key, $value := $.Site.Taxonomies }}
     {{ if isset $params $key }}
-    <section class="footer">
-      <div>
-        <ul class="terms">
           {{ range (index $params $key) }}
-          <li><a  class="tags" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
+          <li><a  class="tags tag-{{.}}" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
           {{ end }}
-        </ul>
-      </div>
-    </section>
     {{ end }}
     {{ end }}
+
+    </ul>
 
     {{ partial "share.html" . }}
   </header>

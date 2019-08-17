@@ -7,6 +7,11 @@
 .l-header > .l-container {
   height: 100%;
 }
+.l-footer {
+  box-shadow: 0px 9px 3px -3px rgba(128,128,128,0.5);
+  background: linear-gradient(#02609F, #0073c2);
+
+}
 .logo{
   padding-top: 25px;
 }
@@ -29,15 +34,32 @@
 }
 
 .tags{
-  height: 12px !important;
-  line-height: 12px !important;
-  color: black !important;
+  height: 14px !important;
+  line-height: 14px !important;
+  color: #fff !important;
   font-size: 12px !important;
   padding: 0 12px !important;
   display: inline-block !important;
-  border: 1px solid #ccc !important;
-  background: white !important;
   border-radius: 0 !important;
+}
+
+.tag-JavaScript{
+  background: #FF85AD !important;
+}
+.tag-CSS{
+  background: #FF9900 !important;
+}
+.tag-Python{
+  background: #787FDC !important;
+}
+.tag-HTML{
+  background: #E5457D !important;
+}
+.tag-Math{
+  background: #56BF00 !important;
+}
+.tag-Others{
+  background: #BA3CB8 !important;
 }
 
 section.sidebar > header{
@@ -67,7 +89,33 @@ section.sidebar > header::first-letter{
 
 
 .latestbox .thumb{
-  background-size: 80% 80% !important;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 4rem;
+  height: 4rem;
+  margin: .5rem;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+.titlesm{
+  color: #0099CC;
+  font-weight: normal !important;
+}
+
+.author-thumb{
+  border-radius: 0 !important;
+  background-color: unset !important;
+}
+
+.c12{
+  width: 100% !important;
+  height: auto !important;
+}
+
+article.li{
+  height: auto !important;
+}
+
+
+.article-body{
+  min-height: 80vh;
 }

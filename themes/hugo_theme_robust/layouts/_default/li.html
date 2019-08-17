@@ -1,9 +1,8 @@
 <article class="li">
   <a href="{{ .Permalink }}">
-    <div class="thumb thumb-{{ .File.UniqueID }}"></div>
+    <!-- <div class="thumb thumb-{{ .File.UniqueID }}"></div> -->
 
     <div class="inner">
-      <h2 class="title">{{ .Title }}</h2>
 
       <ul class="facts">
         <li><time class="posted-time" datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">{{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time></li>
@@ -13,7 +12,7 @@
         {{ range $key, $value := $.Site.Taxonomies }}
           {{ if isset $params $key }}
             {{ range (index $params $key) }}
-              <li><a  class="tags" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
+              <li><a class="tags tag-{{.}}" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
             {{ end }}
           {{ end }}
         {{ end }}
@@ -24,7 +23,8 @@
         {{ end }}
       </ul>
 
-      <div class="summary">{{ .Summary }}</div>
+      <h2 class="title">{{ .Title }}</h2>
+      <!-- <div class="summary">{{ .Summary }}</div> -->
     </div>
   </a>
 </article>
