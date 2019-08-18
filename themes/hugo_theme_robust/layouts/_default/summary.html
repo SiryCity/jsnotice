@@ -1,10 +1,10 @@
 <article class="sn">
 
-  <div class="thumb thumb-{{ .File.UniqueID }}"></div>
+  <!-- <div class="thumb thumb-{{ .File.UniqueID }}"></div> -->
 
   <header class="article-header">
 
-      <div>
+      <div class="topcrumb">
         <nav class="crumb">
           <ol>
             <li><a href="{{ .Site.BaseURL }}"><i class="fas fa-home" aria-hidden="true"></i></a></li>
@@ -16,7 +16,6 @@
         </nav>
       </div>
 
-    <h1 class="title">{{ .Title }}</h1>
 
     <ul class="facts">
       <li><time class="posted-time" datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">{{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time></li>
@@ -39,6 +38,8 @@
 
     </ul>
 
+    <h1 class="title">{{ .Title }}</h1>
+    <hr/>
     {{ partial "share.html" . }}
   </header>
 
@@ -52,7 +53,8 @@
 
   <footer class="article-footer">
 
-    {{ partial "share.html" . }}
+    <!-- {{ partial "share.html" . }} -->
+    <hr/>
 
     <section class="footer">
       <div>
