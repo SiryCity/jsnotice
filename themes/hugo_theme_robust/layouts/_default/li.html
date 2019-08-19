@@ -1,5 +1,5 @@
 <article class="li">
-  <a href="{{ .Permalink }}">
+  <a class="lilink" href="{{ .Permalink }}">
     <!-- <div class="thumb thumb-{{ .File.UniqueID }}"></div> -->
 
     <div class="inner">
@@ -12,7 +12,7 @@
         {{ range $key, $value := $.Site.Taxonomies }}
           {{ if isset $params $key }}
             {{ range (index $params $key) }}
-              <li><a class="tags tag-{{.}}" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
+              <li class="tags tag-{{.}}" >{{ . }}</li>
             {{ end }}
           {{ end }}
         {{ end }}
@@ -23,7 +23,7 @@
         {{ end }}
       </ul>
 
-      <h2 class="title">{{ .Title }}</h2>
+      <h2 class="title lititle">{{ .Title }}</h2>
       <!-- <div class="summary">{{ .Summary }}</div> -->
     </div>
   </a>
