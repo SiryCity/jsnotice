@@ -16,14 +16,13 @@
 
     <div class="adj">
       <div class="mrow">
-         {{.PrevInSection}}
-        {{ with .PrevInSection }}
+        {{ with .Prev }}
         <div class="mcol c6">
           <header>← PREV</header>
           {{ .Render "li_sm" }}
         </div>
         {{ end }}
-        {{ with .NextInSection }}
+        {{ with .Next }}
         <div class="mcol c6">
           <header>NEXT →</header>
           {{ .Render "li_sm" }}
