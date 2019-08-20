@@ -16,13 +16,13 @@
 
     <div class="adj">
       <div class="mrow">
-        {{ with .Prev }}
+        {{ with .Next }}
         <div class="mcol c6">
           <header>← PREV</header>
           {{ .Render "li_sm" }}
         </div>
         {{ end }}
-        {{ with .Next }}
+        {{ with .Prev }}
         <div class="mcol c6">
           <header>NEXT →</header>
           {{ .Render "li_sm" }}
