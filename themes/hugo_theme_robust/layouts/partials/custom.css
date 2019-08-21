@@ -66,19 +66,22 @@
   background: #BA3CB8 !important;
 }
 
-section.sidebar > header{
+.customtitle{
   color: #0475C2;
   font-size: 20px;
   height: 41px;
   line-height: 50px;
   border-bottom: 2.2px solid #0475c2;
   margin-bottom: 5px;
-  font-family: serif;
-  font-weight: bold; 
+  font-family: serif !important;
+  font-weight: bold !important; 
   display: inline-block;
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
+  margin-right: 30rem;
 }
-section.sidebar > header::first-letter{
+
+
+.customtitle::first-letter{
   font-size: 40px;
 }
 
@@ -153,4 +156,12 @@ article.li{
 
 .singlehr{
   border-top: 1px solid #cfd8dc;
+}
+
+footer p, footer a {
+  color: #ddd;
+}
+
+.policy{
+  margin-bottom: 10px;
 }

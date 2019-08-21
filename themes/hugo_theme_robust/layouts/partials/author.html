@@ -1,9 +1,9 @@
 {{ with .Site.Params.author }}
 <section class="sidebar">
-  <header>AUTHOR</header>
   <div>
     <div class="author">
       {{ with .thumbnail }}
+      <header class='customtitle'> AUTHOR</header>
       <div class="author-thumb" style="background-image: url({{ $.Site.BaseURL }}{{ . }});"></div>
       {{ end }}
       <div class="author-name">{{ .name }}</div>
