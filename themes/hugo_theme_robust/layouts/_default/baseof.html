@@ -29,13 +29,16 @@
     {{ template "_internal/google_analytics.html" . }}
     {{ end }}
 
-    <header class="l-header">
-      <div class="l-container">
-        <div class="logo">
-          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <!-- ヘッダー -->
+    <header id='header'>
+      <a id='header__link' href='{{ .Site.BaseURL }}'>
+        <h1 id='header__link__title'>
+          {{ .Site.Title }}
+        </h1>
+        <div id='header__link__description'>
+          SINCE1995
         </div>
-        {{ partial "description.html" . }}
-      </div>
+      </a>
     </header>
 
     <main>
