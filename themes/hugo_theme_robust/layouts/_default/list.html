@@ -13,7 +13,9 @@
     <div class="articles">
       <div class="mrow">
         {{ range (.Paginate .Data.Pages).Pages }}
-        <div class="mcol c6 c12">{{ .Render "li" }}</div>
+        <div class="mcol c12">
+          {{ .Render "li" }}
+        </div>
         {{ end }}
       </div>
     </div>
