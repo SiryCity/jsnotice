@@ -77,17 +77,6 @@ aside.f {
   border-bottom: 2px dashed #fff;
 }
 
-.l-container {
-  position: relative;
-  max-width: 68rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.l-container.thin {
-  max-width: 44rem;
-}
-
 @media (max-width: 768px) {
   .l-sidebar {
     margin-top: 4rem;

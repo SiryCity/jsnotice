@@ -4,9 +4,6 @@
   background: linear-gradient(#0073c2, #02609F);
   padding: 0;
 }
-.l-header > .l-container {
-  height: 100%;
-}
 .mrow{
   padding-top: 94px !important;
 }
@@ -192,6 +189,25 @@ footer p, footer a {
       color: #ddd;
       letter-spacing: 1px;
     }
+
+/* メイン */
+#main{
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  margin: 0 auto;
+  background: #fefefe;
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,.1);
+  box-sizing: border-box;
+  padding: 40px;
+}
+  #main__inner{
+    width: 1020px;
+    background: #F6F6F6;
+    box-shadow: inset 1px 1px 2px hsla(0,0%,50.2%,.5);
+    padding: 15px;
+    box-sizing: border-box;
+  }
 
 /* フッター */
 #footer {

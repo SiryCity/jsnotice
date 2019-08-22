@@ -41,20 +41,21 @@
       </a>
     </header>
 
-    <main>
-      <div class="l-container">
-        {{ block "main" . }}{{ end }}
+    <!-- メイン -->
+    <main id='main'>
+      <div id='main__inner'>
+       {{ block "main" . }}{{ end }}
       </div>
     </main>
 
     <!-- フッター -->
-    <footer id="footer">
+    <footer id='footer'>
       <p class='footer__policy'>
         当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。 このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。
         このトラフィックデータは匿名で収集されており、個人を特定するものではありません。 この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
       </p>
 
-      <p class='footer__rights'>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span class="h-logo">&copy; 2019 {{ .Site.Title }}</span>{{ end }}</p>
+      <p class='footer__rights'>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span>&copy; 2019 {{ .Site.Title }}</span>{{ end }}</p>
       <aside>
         <p class='footer__rights'>Powered by <a href="https://gohugo.io/">Hugo</a>. 
         <a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
