@@ -18,46 +18,6 @@
 }
 
 
-.posted-time {
-  height: 12px;
-  line-height: 12px;
-  color: black;
-  font-size: 12px;
-  padding: 0 12px;
-  display: inline-block;
-  border: 1px solid #ccc;
-}
-
-.tags{
-  height: 14px !important;
-  line-height: 14px !important;
-  color: #fff !important;
-  font-size: 12px !important;
-  padding: 0 12px !important;
-  display: inline-block !important;
-  border-radius: 0 !important;
-  margin-left: -20px !important;
-}
-
-.tag-JavaScript{
-  background: #FF85AD !important;
-}
-.tag-CSS{
-  background: #FF9900 !important;
-}
-.tag-Python{
-  background: #787FDC !important;
-}
-.tag-HTML{
-  background: #E5457D !important;
-}
-.tag-Math{
-  background: #56BF00 !important;
-}
-.tag-Others{
-  background: #BA3CB8 !important;
-}
-
 .customtitle{
   color: #0475C2;
   font-size: 20px;
@@ -105,15 +65,6 @@
   background-color: unset !important;
 }
 
-.c12{
-  width: 100% !important;
-  height: auto !important;
-}
-
-article.li{
-  height: auto !important;
-}
-
 
 .article-body{
   min-height: 80vh;
@@ -126,30 +77,6 @@ article.li{
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 3px;
-}
-
-.lilink{
-  width: 100%;
-  height: 100% !important;
-  display: block !important;
-  box-sizing: border-box;
-  padding: 1rem;
-}
-
-.lititle{
-  padding-top: 10px;
-  font-weight: normal;
-  color: #0099CC !important;
-  font-size: 18px !important;
-}
-
-.singletitle{
-  color: #18375A;
-  font-size: 20px !important;
-}
-
-.singlehr{
-  border-top: 1px solid #cfd8dc;
 }
 
 footer p, footer a {
@@ -168,6 +95,10 @@ footer p, footer a {
    overflow-x: hidden;
  }
 
+/* 共通 */
+a {
+  text-decoration: none;
+}
 /* ヘッダー */
 #header{
   width: 100%;
@@ -206,6 +137,11 @@ footer p, footer a {
   box-sizing: border-box;
   padding: 40px;
 }
+@media (max-width: 675px) {
+  #main{
+    padding: 0;
+  }
+}
   #main__inner{
     width: 1020px;
     max-width: 100%;
@@ -217,7 +153,11 @@ footer p, footer a {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
+  @media (max-width: 675px) {
+    #main__inner{
+      padding: 0;
+    }
+  }
     /* 645px 15px 330px */
     /* メイン左側と右側 */
     #main__inner__inner-left{
@@ -263,12 +203,67 @@ footer p, footer a {
   }
 
 /* ホームの左側の記事一覧の1つ分 */
-.inner-left__post-link{
+.inner-left__post-box{
   width: 100%;
   border-bottom: 1px dotted #ccc;
   margin-bottom: 10px;
   padding: 5px 0;
 }
+  .inner-left__post-box__date{
+    width: 87px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .inner-left__post-box__tag{
+    width: 87px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .inner-left__post-box__tag--JavaScript{
+    background: #FF85AD !important;
+  }
+  .inner-left__post-box__tag--CSS{
+    background: #FF9900 !important;
+  }
+  .inner-left__post-box__tag--Python{
+    background: #787FDC !important;
+  }
+  .inner-left__post-box__tag--HTML{
+    background: #E5457D !important;
+  }
+  .inner-left__post-box__tag--Math{
+    background: #56BF00 !important;
+  }
+  .inner-left__post-box__tag--Others{
+    background: #BA3CB8 !important;
+  }
+  
+  .inner-left__post-box__title{
+    display: inline-block;
+    line-height: 12px;
+    color: #0099CC;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 5px;
+    border-bottom: 1px solid transparent;
+  }
+  .inner-left__post-box__title:hover{
+    border-bottom: 1px solid #0099CC;
+  }
+
+
+
 
 
 

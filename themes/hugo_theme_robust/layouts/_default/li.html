@@ -1,25 +1,35 @@
 <!-- ホームの左側の記事一覧の1つ分 -->
-<article class='inner-left__post-link'>
-  <a class="inner-left__post-link" href="{{ .Permalink }}">
-
-      <ul class="facts">
-        <li><time class="posted-time" datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">{{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time></li>
-        
-        {{ $params := .Params }}
-        {{ range $key, $value := $.Site.Taxonomies }}
-          {{ if isset $params $key }}
-            {{ range (index $params $key) }}
-              <li class="tags tag-{{.}}" >{{ . }}</li>
-            {{ end }}
-          {{ end }}
+<article class='inner-left__post-box'>
+  <a href='{{ .Permalink }}'>
+  
+    <time class='inner-left__post-box__date' datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
+      {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+    </time>
+    
+    {{ $params := .Params }}
+    {{ range $key, $value := $.Site.Taxonomies }}
+      {{ if isset $params $key }}
+        {{ range (index $params $key) }}
+          <span class='inner-left__post-box__tag inner-left__post-box__tag--{{.}}' >{{ . }}</span>
         {{ end }}
+      {{ end }}
+    {{ end }}
 
-        {{ if eq (getenv "HUGO_ENV") "DEV" }}
-        <li>{{ .WordCount }} Words</li>
-        {{ if .IsDraft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
-        {{ end }}
-      </ul>
-
-      <h2 class="title lititle">{{ .Title }}</h2>
+    {{ if eq (getenv "HUGO_ENV") "DEV" }}
+      <span>
+        {{ .WordCount }} Words
+      </span>
+      {{ if .IsDraft }}
+        <span style="color: #2196f3;">
+          DRAFT
+        </span>
+      {{ end }}
+    {{ end }}
+    
+    <br/>
+    
+    <h2 class='inner-left__post-box__title'>
+      {{ .Title }}
+    </h2>
   </a>
 </article>

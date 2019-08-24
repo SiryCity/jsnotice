@@ -1,10 +1,12 @@
-<aside class="l-sidebar">
-
-  <div class="sections sidebar">
-    {{ partial "author.html" . }}
-    {{ partial "latests.html" . }}
-    {{ partial "categories.html" . }}
-    {{ partial "tags.html" . }}
-  </div>
-
-</aside>
+<div class='inner-block'>
+  <header class='inner-block__title'>AUTHOR</header>
+  {{ partial "author.html" . }}
+</div>
+<div class='inner-block'>
+  <header class='inner-block__title'>LATESTS</header>
+  {{ partial "latests.html" . }}
+</div>
+<div class='inner-block'>
+  <header class='inner-block__title'>TAGS</header>
+  {{ partial "tags.html" . }}
+</div>
