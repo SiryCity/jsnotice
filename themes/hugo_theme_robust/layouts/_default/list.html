@@ -2,26 +2,26 @@
 
 {{ define "main" }}
 
+    <!-- 2カラム 左側 -->
     <div id="main__inner__inner-left">
-
       {{ if not .IsHome }}
-        <header class="page-title">
-          <h1 class="title">{{ .Title }}</h1>
-        </header>
+        <p>{{ .Title }}</p>
       {{ end }}
 
-      <div class="articles">
-        <div class="mrow">
-          {{ range (.Paginate .Data.Pages).Pages }}
-          <div class="mcol c12">
-            {{ .Render "li" }}
-          </div>
-          {{ end }}
-        </div>
+      <!-- 記事一覧 -->
+      <div class='inner-block'>
+        <header class='inner-block__title'>Information</header>
+        <!-- 記事リンク一覧 -->
+        {{ range (.Paginate .Data.Pages).Pages }}
+          {{ .Render "li" }}
+        {{ end }}
+        <!-- 次(前)のページ -->
+        {{ partial "pagination.html" . }}
       </div>
-      {{ partial "pagination.html" . }}
+
     </div>
 
+    <!-- 2カラム 右側 -->
     <div id="main__inner__inner-right">
       {{ partial "sidebar.html" . }}
     </div>

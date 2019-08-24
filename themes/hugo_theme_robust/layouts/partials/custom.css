@@ -165,6 +165,7 @@ footer p, footer a {
 
  body{
    max-width: 100vw;
+   overflow-x: hidden;
  }
 
 /* ヘッダー */
@@ -231,10 +232,51 @@ footer p, footer a {
         width: 100%;
       }
     }
-    #main__inner__inner-left--amp,
+    #main__inner__inner-left--amp{
+      width: 100%;
+    }
     #main__inner__inner-right--amp{
       width: 100%;
     }
+
+/* 一つのコンテンツのブロック */
+.inner-block{
+  width: 100%;
+  background: #fefefe;
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,.1);
+  box-sizing: border-box;
+  padding: 15px;
+}
+  .inner-block__title{
+    color: #0475C2;
+    font-size: 20px;
+    height: 40px;
+    line-height: 51px;
+    border-bottom: 2.2px solid #0475c2;
+    font-family: serif;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 1;
+  }
+  .inner-block__title::first-letter{
+    font-size: 40px;
+  }
+
+/* ホームの左側の記事一覧の1つ分 */
+.inner-left__post-link{
+  width: 100%;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+
+
+
+
+
+
+
 
 /* フッター */
 #footer {
