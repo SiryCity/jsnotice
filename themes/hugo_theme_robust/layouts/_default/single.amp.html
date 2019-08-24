@@ -5,24 +5,33 @@
 {{ partial "single_json_ld.html" . }}
 {{ end }}
 
-{{ define "main" }}
-{{ .Render "summary" }}
 
-<div class="adj">
-  <div class="mrow">
-    {{ with .PrevInSection }}
-    <div class="mcol c6">
-      <header>← PREV</header>
-      {{ .Render "li_sm" }}
+{{ define "main" }}
+
+  <div id="main__inner__inner-left--amp">
+
+    {{ .Render "summary" }}
+
+    <div class="adj">
+      <div class="mrow">
+        {{ with .Next }}
+        <div class="mcol c6">
+          <header>← PREV</header>
+          {{ .Render "li_sm" }}
+        </div>
+        {{ end }}
+        {{ with .Prev }}
+        <div class="mcol c6">
+          <header>NEXT →</header>
+          {{ .Render "li_sm" }}
+        </div>
+        {{ end }}
+      </div>
     </div>
-    {{ end }}
-    {{ with .NextInSection }}
-    <div class="mcol c6">
-      <header>NEXT →</header>
-      {{ .Render "li_sm" }}
-    </div>
-    {{ end }}
   </div>
-</div>
+
+  <div id="main__inner__inner-right--amp">
+    {{ partial "sidebar.html" . }}
+  </div>
 
 {{ end }}

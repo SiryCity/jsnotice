@@ -1,9 +1,8 @@
 {{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ end }}
 
 {{ define "main" }}
-  <div class="mrow">
 
-    <div class="mcol c8">
+    <div id="main__inner__inner-left">
 
       {{ if not .IsHome }}
         <header class="page-title">
@@ -20,15 +19,12 @@
           {{ end }}
         </div>
       </div>
-
       {{ partial "pagination.html" . }}
-
     </div>
 
-    <div class="mcol c4">
+    <div id="main__inner__inner-right">
       {{ partial "sidebar.html" . }}
     </div>
     
-  </div>
 {{ end }}
 

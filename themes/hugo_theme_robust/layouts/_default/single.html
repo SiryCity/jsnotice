@@ -9,8 +9,8 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="mrow">
-  <div class="mcol c8">
+
+  <div id="main__inner__inner-left">
 
     {{ .Render "summary" }}
 
@@ -30,11 +30,9 @@
         {{ end }}
       </div>
     </div>
-
-    {{ template "_internal/disqus.html" . }}
   </div>
-  <div class="mcol c4">
+
+  <div id="main__inner__inner-right">
     {{ partial "sidebar.html" . }}
   </div>
-</div>
 {{ end }}
