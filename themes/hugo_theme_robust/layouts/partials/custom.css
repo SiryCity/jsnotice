@@ -238,10 +238,40 @@ a {
     border-bottom: 1px solid #0099CC;
   }
 
-/* プロフィール */
-.inner-right__profile-box{
+/* リンク */
+.inner-left__link-area{
 
 }
+
+/* プロフィール */
+.inner-right__profile-area{
+  width: 143px;
+  height: 143px;
+  box-sizing: border-box;
+  border: 1px solid #D1D7DE;
+}
+@media (max-width: 675px) {
+  .inner-right__profile-area{
+    margin: 0 auto;
+  }
+}
+  .inner-right__profile-area__image{
+    width: 143px;
+    height: 121px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+  .inner-right__profile-area__name{
+    width: 143px;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    background: #0473C2;
+    text-align: center;
+    font-size: 14px;
+  }
+
 
 /* 最新の投稿 */
 .inner-right__latest-area{
