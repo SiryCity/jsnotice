@@ -1,7 +1,7 @@
-<section class="sidebar">
-  <div>
-    <ul class="terms">
-      {{ range $key, $value := first 10 .value.ByCount }}<li><a href="{{ $.baseurl}}{{ $.key }}/{{ .Name | urlize }}">{{ .Name }} <span class="count">({{ $value.Count }})</span></a></li>{{ end }}
-    </ul>
-  </div>
-</section>
+<br>
+{{ range $key, $value := first 10 .value.ByCount }}
+  <a class='inner-right__tag-area inner-right__tag-area--{{.Name}}' href="{{ $.baseurl}}{{ $.key }}/{{ .Name | urlize }}">
+    <i class='fas fa-tags'></i>
+    <div class='inner-right__tag-area__name'>{{ .Name }}</div>
+  </a>
+{{ end }}

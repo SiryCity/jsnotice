@@ -5,7 +5,11 @@
     <!-- 2カラム 左側 -->
     <div id="main__inner__inner-left">
       {{ if not .IsHome }}
-        <p>{{ .Title }}</p>
+        <div class='inner-block'>
+          <header class='inner-block__title'>
+            {{ .Title }}
+          </header>
+        </div>
       {{ end }}
 
       <!-- 記事一覧 -->

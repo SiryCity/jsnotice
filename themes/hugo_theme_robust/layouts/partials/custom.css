@@ -304,11 +304,38 @@ a {
 
 /* タグ */
 .inner-right__tag-area{
-
+  width: 147px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px 0;
+  color: white;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
+  .inner-right__tag-area--javascript{
+    background: #FF85AD;
+  }
+  .inner-right__tag-area--css{
+    background: #FF9900;
+  }
+  .inner-right__tag-area--python{
+    background: #787FDC;
+  }
+  .inner-right__tag-area--html{
+    background: #E5457D;
+  }
+  .inner-right__tag-area--math{
+    background: #56BF00;
+  }
+  .inner-right__tag-area--others{
+    background: #BA3CB8;
+  }
 
-
-
+  .inner-right__tag-area__name{
+    margin-left: 5px;
+  }
 
 
 /* フッター */
