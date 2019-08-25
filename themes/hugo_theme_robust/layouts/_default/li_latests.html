@@ -1,19 +1,38 @@
-<article class="lism lilatests">
-  <a href="{{ .Permalink }}">
-    <div class="thumb thumb-{{ .File.UniqueID }}"></div>
+<article class='inner-right__latest-area'>
+  <a class='inner-right__latest-area__link thumb-{{ .File.UniqueID }}' href="{{ .Permalink }}">
 
-    <div class="inner">
+        {{ $params := .Params }}
+        {{ range $key, $value := $.Site.Taxonomies }}
+          {{ if isset $params $key }}
+            {{ range (index $params $key) }}
+              <span class='inner-right__latest-area__tags'>
+                {{ . }}
+              </span>
+            {{ end }}
+          {{ end }}
+        {{ end }}
 
-      <ul class="facts sm">
-        <li><time datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">{{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time></li>
-        {{ with .Section }}<li><i class="fas fa-bookmark" aria-hidden="true"></i>{{ . | upper }}</li>{{ end }}
+        <br>
+
+        <time class='inner-right__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
+          {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+        </time>
+
         {{ if eq (getenv "HUGO_ENV") "DEV" }}
-        <li>{{ .WordCount }} Words</li>
-        {{ if .IsDraft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
+          <span>
+            {{ .WordCount }} Words
+          </span>
+          {{ if .IsDraft }}
+            <span style="color: #2196f3;">
+              DRAFT
+            </span>
+          {{ end }}
         {{ end }}
       </ul>
 
-      <div class="title titlesm">{{ .Title }}</div>
-    </div>
+      <div class='inner-right__latest-area__title'>
+        {{ .Title }}
+      </div>
+      
   </a>
 </article>
