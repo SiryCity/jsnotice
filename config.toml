@@ -2,7 +2,7 @@ baseURL = "https://hugoamp.netlify.com/"
 languageCode = "ja"
 title = "JavaScriptに関するお知らせ"
 theme = "hugo_theme_robust"
-paginate = 20
+paginate = 21
 
 [outputs]
 home = [ "HTML", "AMP" ]

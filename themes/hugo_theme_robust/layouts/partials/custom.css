@@ -143,6 +143,7 @@ a {
   width: 100%;
   height: 390px;
   background: #0073c2;
+  border-radius: 5px;
 }
 
 /* 一つのコンテンツのブロック */
@@ -233,8 +234,23 @@ a {
 
 /* ページネーション */
 .inner-left__pagenation-area{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 10px;
 
 }
+  .inner-left__pagenation-area__button{
+    width: 65px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    background: #0099CC;
+    font-size: 10px;
+    color: white;
+    display: block;
+  }
+
 
 /* リンク */
 .inner-left__link-area{
