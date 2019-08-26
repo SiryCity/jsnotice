@@ -9,27 +9,28 @@
 {{ define "main" }}
 
   <!-- 2カラム 左側 -->
-  <div id="main__inner__inner-left--amp">
-
-    {{ .Render "summary" }}
-
-    <div class="adj">
-      <div class="mrow">
-        {{ with .Next }}
-        <div class="mcol c6">
-          <header>← PREV</header>
-          {{ .Render "li_sm" }}
+  <div id="main__inner__inner-left">
+      <div class='inner-block'>
+        {{ .Render "summary" }}
+  
+        <div class="adj">
+          <div class="mrow">
+            {{ with .Next }}
+            <div class="mcol c6">
+              <header>← PREV</header>
+              {{ .Render "li_sm" }}
+            </div>
+            {{ end }}
+            {{ with .Prev }}
+            <div class="mcol c6">
+              <header>NEXT →</header>
+              {{ .Render "li_sm" }}
+            </div>
+            {{ end }}
+          </div>
         </div>
-        {{ end }}
-        {{ with .Prev }}
-        <div class="mcol c6">
-          <header>NEXT →</header>
-          {{ .Render "li_sm" }}
-        </div>
-        {{ end }}
       </div>
     </div>
-  </div>
 
   <!-- 2カラム 右側 -->
   <div id="main__inner__inner-right--amp">

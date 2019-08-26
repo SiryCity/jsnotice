@@ -1,53 +1,7 @@
-
-
-.latestbox{
-  margin-top: 10px;
+body{
+  max-width: 100vw;
+  overflow-x: hidden;
 }
-
-
-
-.latestbox .thumb{
-  width: 4rem;
-  height: 4rem;
-  margin: .5rem;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-}
-
-.titlesm{
-  color: #0099CC;
-  font-weight: normal;
-}
-
-
-.article-body{
-  min-height: 80vh;
-}
-
-.topcrumb{
-  background: #0075C2;
-  padding: 10px 5px 3px;
-  height: 82px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-}
-
-footer p, footer a {
-  color: #ddd;
-}
-
-
-
-
-/**
- *  BEM
- */
-
- body{
-   max-width: 100vw;
-   overflow-x: hidden;
- }
 
 /* 共通 */
 a {
@@ -251,7 +205,6 @@ a {
     display: block;
   }
 
-
 /* リンク */
 .inner-left__link-area{
   width: 195px;
@@ -266,6 +219,18 @@ a {
   font-size: 36px;
   margin: 0 7.5px 7.5px 0;
 }
+
+/* 記事ページ */
+.article{
+}
+  .article__header{
+  }
+  .article__markdown{
+  }
+  .article__footer{
+  }
+  .article__pagenation{
+  }
 
 /* プロフィール */
 .inner-right__profile-area{
@@ -394,10 +359,15 @@ a {
     font-size: 12px;
     line-height: 2;
     margin-bottom: 20px;
+    color: white;
   }
   .footer__rights{
     font-size: 12px;
     margin-bottom: 5px;
     text-align: center;
-
+    color: white;
+  }
+  .footer__links{
+    color:white;
+    text-decoration: underline;
   }
