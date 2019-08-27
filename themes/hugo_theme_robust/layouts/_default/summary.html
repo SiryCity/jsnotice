@@ -1,70 +1,31 @@
-<article class="sn">
+<article class='article'>
+  <header class='article__header'>
 
-  <!-- <div class="thumb thumb-{{ .File.UniqueID }}"></div> -->
-
-  <header class="article-header">
-
-      <div class="topcrumb">
-        <nav class="crumb">
-          <ol>
-            <li><a href="{{ .Site.BaseURL }}"><i class="fas fa-home" aria-hidden="true"></i></a></li>
-            {{ with .Section }}
-            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ . | upper }}</span></a></li>
-            {{ end }}
-            <li class="active">{{ .Title }}</li>
-          </ol>
-        </nav>
-      </div>
-
-
-    <ul class="facts">
-      <li><time class="posted-time" datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">{{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time></li>
-      {{ if ne .Date .Lastmod }}<li><i class="fas fa-sync" aria-hidden="true"></i><time class="posted-time" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}">{{ .Lastmod.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}</time></li>{{ end }}
-      {{ with .Section }}<li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/">{{ . | upper }}</a></li>{{ end }}
-      {{ if eq (getenv "HUGO_ENV") "DEV" }}
-      <li>{{ .WordCount }} Words</li>
-      {{ if .IsDraft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
-      {{ end }}
-
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
+      {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+    </time>
 
     {{ $params := .Params }}
     {{ range $key, $value := $.Site.Taxonomies }}
-    {{ if isset $params $key }}
-          {{ range (index $params $key) }}
-          <li><a  class="tags tag-{{.}}" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
-          {{ end }}
-    {{ end }}
+      {{ if isset $params $key }}
+        {{ range (index $params $key) }}
+          <a  class="tag-{{.}}" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      {{ end }}
     {{ end }}
 
-    </ul>
-
-    <h1 class="title singletitle">{{ .Title }}</h1>
-    <hr class="singlehr"/>
+    <h1>{{ .Title }}</h1>
+    <hr/>
     {{ partial "share.html" . }}
+
   </header>
 
-  {{ if .Params.toc }}
-  <div class="toc">
-    {{ .TableOfContents }}
+  <div class='article__markdown'>
+    {{ .Content }}
   </div>
-  {{ end }}
 
-  <div class="article-body">{{ .Content }}</div>
-
-  <footer class="article-footer">
-
-    <!-- {{ partial "share.html" . }} -->
-    <hr class="singlehr"/>
-
-    <section class="footer">
-      <div>
-        <nav class="crumb">
-          <ol>
-            <li><a href="{{ .Site.BaseURL }}">TOP</a></li>
-          </ol>
-        </nav>
-      </div>
-    </section>
+  <footer class='article__footer'>
+    <a href="{{ .Site.BaseURL }}">TOP</a>
   </footer>
 
 </article>

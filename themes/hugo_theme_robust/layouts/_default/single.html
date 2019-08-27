@@ -1,4 +1,4 @@
-{{ define "title" }}{{ .Title }} - {{ end }}
+{{ define "title" }}{{ .Title }} | {{ end }}
 
 {{ define "meta" }}
 {{ range .AlternativeOutputFormats }}
@@ -9,6 +9,23 @@
 {{ end }}
 
 {{ define "main" }}
+
+  <!-- 2カラム 上側 -->
+  <div id='main__inner__inner-top'>
+    <div class='inner-block'>
+      <nav class='inner-top__bread-crumb-area'>
+        <a class='inner-top__bread-crumb-area__bread-crumb' href="{{ .Site.BaseURL }}">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </a>
+        <span class='inner-top__bread-crumb-area__bread-crumb'>
+          ＞
+        </span>
+        <span class='inner-top__bread-crumb-area__bread-crumb'>
+          {{ .Title }}
+        </span>
+      </nav>
+    </div>
+  </div>
 
   <!-- 2カラム 左側 -->
   <div id="main__inner__inner-left">
