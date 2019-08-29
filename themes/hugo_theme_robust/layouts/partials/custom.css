@@ -238,8 +238,95 @@ a {
 }
   .article__header{
   }
+    .article__header__date{
+      width: 87px;
+      height: 14px;
+      line-height: 14px;
+      text-align: center;
+      color: black;
+      font-size: 12px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .article__header__tag{
+      width: 87px;
+      height: 14px;
+      line-height: 14px;
+      text-align: center;
+      color: #fff;
+      font-size: 12px;
+      display: inline-block;
+    }
+    .article__header__tag--JavaScript{
+      background: #FF85AD;
+    }
+    .article__header__tag--CSS{
+      background: #FF9900;
+    }
+    .article__header__tag--Python{
+      background: #787FDC;
+    }
+    .article__header__tag--HTML{
+      background: #E5457D;
+    }
+    .article__header__tag--Math{
+      background: #56BF00;
+    }
+    .article__header__tag--Others{
+      background: #BA3CB8;
+    }
+    .article__header__title{
+      color: #18375A;
+      font-size: 20px;
+      border-bottom: 1px solid #ccc;
+      margin: 25px 0 20px;
+      padding: 0 5px 15px;
+    }
   .article__markdown{
   }
+    .article__markdown > h2{
+      color: #18375A;
+      font-size: 20px;
+      margin: 100px 0 20px;
+    }
+    .article__markdown > h3{
+      color: #18375A;
+      font-size: 20px;
+      margin: 100px 0 20px;
+    }
+    .article__markdown > p{
+      font-size: 12px;
+      line-height: 150%;
+      margin: 15px 0;
+    }
+    .article__markdown > pre{
+      color: #b9b5b8;
+      background: #322931;
+      padding: 20px 10px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .hljs{
+      font-family: monospace;
+      line-height: 180%;
+    }
+    .hljs-number{
+      color: #fd8b19;
+    }
+    .hljs-params{
+      color: #fd8b19;
+    }
+    .hljs-keyword{
+      color: #c85e7c;
+    }
+    .hljs-title{
+      color: #1290bf;
+    }
+    .hljs-function{
+      color: #1290bf;
+    }
+
   .article__footer{
   }
   .article__pagenation{

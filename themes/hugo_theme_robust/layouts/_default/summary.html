@@ -1,7 +1,7 @@
 <article class='article'>
   <header class='article__header'>
 
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
+    <time class='article__header__date' datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
       {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
     </time>
 
@@ -9,13 +9,12 @@
     {{ range $key, $value := $.Site.Taxonomies }}
       {{ if isset $params $key }}
         {{ range (index $params $key) }}
-          <a  class="tag-{{.}}" href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a>
+          <a class='article__header__tag article__header__tag--{{.}}' href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
       {{ end }}
     {{ end }}
 
-    <h1>{{ .Title }}</h1>
-    <hr/>
+    <h1 class='article__header__title'>{{ .Title }}</h1>
     {{ partial "share.html" . }}
 
   </header>
