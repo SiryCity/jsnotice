@@ -1,38 +1,26 @@
 <article class='inner-right__latest-area'>
   <a class='inner-right__latest-area__link thumb-{{ .File.UniqueID }}' href="{{ .Permalink }}">
 
-        {{ $params := .Params }}
-        {{ range $key, $value := $.Site.Taxonomies }}
-          {{ if isset $params $key }}
-            {{ range (index $params $key) }}
-              <span class='inner-right__latest-area__tags'>
-                {{ . }}
-              </span>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-
-        <br>
-
-        <time class='inner-right__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
-          {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
-        </time>
-
-        {{ if eq (getenv "HUGO_ENV") "DEV" }}
-          <span>
-            {{ .WordCount }} Words
+    {{ $params := .Params }}
+    {{ range $key, $value := $.Site.Taxonomies }}
+      {{ if isset $params $key }}
+        {{ range (index $params $key) }}
+          <span class='inner-right__latest-area__tags'>
+            {{ . }}
           </span>
-          {{ if .IsDraft }}
-            <span style="color: #2196f3;">
-              DRAFT
-            </span>
-          {{ end }}
         {{ end }}
-      </ul>
+      {{ end }}
+    {{ end }}
 
-      <div class='inner-right__latest-area__title'>
-        {{ .Title }}
-      </div>
+    <br>
+
+    <time class='inner-right__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
+      {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+    </time>
+
+    <div class='inner-right__latest-area__title'>
+      {{ .Title }}
+    </div>
       
   </a>
 </article>

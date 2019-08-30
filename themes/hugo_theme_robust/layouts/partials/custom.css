@@ -334,6 +334,7 @@ a {
     padding: 10px 0 10px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    margin: 100px 0 30px;
   }
     .article__footer__button{
       width: 65px;
@@ -348,8 +349,54 @@ a {
     .article__footer__button-wrapper{
       width: 65px;
     }
-  .article__pagenation{
-  }
+    .article__pagenation__latest-area{
+      width: 100%;
+      border-bottom: 1px dotted #ccc
+    }
+      .article__pagenation__latest-area__link{
+        width: calc(100% - 64px);
+        min-height: 68px;
+        margin: 10px 0;
+        padding-left: 64px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 60px 60px;
+        position: relative;
+      }
+    
+      .article__pagenation__latest-area__link:hover{
+        background-color: rgba(0, 153, 204, .1);
+      }
+      .article__pagenation__latest-area__link::before{
+        content: '';
+        display: block;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #D1D7DE;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .article__pagenation__latest-area__tags{
+        color: #183759;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.4;
+      }
+      .article__pagenation__latest-area__time{
+        color: #333;
+        display: block;
+        font-size: 11px;
+        line-height: 1.4;
+        margin-bottom: 5px;
+      }
+      .article__pagenation__latest-area__title{
+        color: #0099CC;
+        font-size: 12px;
+      }
+    
 
 /* プロフィール */
 .inner-right__profile-area{

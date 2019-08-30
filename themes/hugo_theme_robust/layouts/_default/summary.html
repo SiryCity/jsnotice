@@ -44,4 +44,48 @@
     </div>
   </footer>
 
+  {{ with .Next }}
+    <article class='article__pagenation__latest-area'>
+      <a class='article__pagenation__latest-area__link thumb-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+    
+        <span class='article__pagenation__latest-area__tags'>
+          PREV
+        </span>
+    
+        <br>
+    
+        <time class='article__pagenation__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
+          {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+        </time>
+    
+        <div class='article__pagenation__latest-area__title'>
+          {{ .Title }}
+        </div>
+          
+      </a>
+    </article>
+  {{ end }}
+
+  {{ with .Prev }}
+    <article class='article__pagenation__latest-area'>
+      <a class='article__pagenation__latest-area__link thumb-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+    
+        <span class='article__pagenation__latest-area__tags'>
+          NEXT
+        </span>
+    
+        <br>
+    
+        <time class='article__pagenation__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
+          {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+        </time>
+    
+        <div class='article__pagenation__latest-area__title'>
+          {{ .Title }}
+        </div>
+          
+      </a>
+    </article>
+  {{ end }}
+    
 </article>
