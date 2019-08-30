@@ -328,7 +328,26 @@ a {
     }
 
   .article__footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
+    .article__footer__button{
+      width: 65px;
+      height: 21px;
+      line-height: 21px;
+      text-align: center;
+      background: #0099CC;
+      font-size: 10px;
+      color: white;
+      display: block;
+    }
+    .article__footer__button-wrapper{
+      width: 65px;
+    }
   .article__pagenation{
   }
 

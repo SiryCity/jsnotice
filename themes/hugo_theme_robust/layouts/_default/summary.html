@@ -23,8 +23,25 @@
     {{ .Content }}
   </div>
 
+
   <footer class='article__footer'>
-    <a href="{{ .Site.BaseURL }}">TOP</a>
+    <div class='article__footer__button-wrapper'>
+      {{ with .Next }}
+        <a class='article__footer__button' href="{{ .Permalink }}">
+          ← PREV
+        </a>
+      {{ end }}
+    </div>
+    <a class='article__footer__button' href="{{ .Site.BaseURL }}">
+      TOP
+    </a>
+    <div class='article__footer__button-wrapper'>
+      {{ with .Prev }}
+        <a class='article__footer__button' href="{{ .Permalink }}">
+          NEXT →
+        </a>
+      {{ end }}
+    </div>
   </footer>
 
 </article>
