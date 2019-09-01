@@ -4,6 +4,8 @@ title = "JavaScriptに関するお知らせ"
 theme = "hugo_theme_robust"
 paginate = 21
 
+# googleAnalytics = "UA-137716392-1"
+
 [outputs]
 home = [ "HTML", "AMP" ]
 page = [ "HTML", "AMP" ]
