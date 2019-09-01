@@ -2,6 +2,11 @@
 <html>
   <head>
     {{ partial "meta.html" . }}
+
+
+
+
+
     {{ with .Site.Params.googlefonts }}
     <link href="{{ . }}" rel="stylesheet">
     {{ else }}
@@ -12,16 +17,14 @@
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
     {{ block "meta" . }}{{ end }}
     <style>
-{{ partial "styles.css" . | safeCSS }}
-{{ partial "custom.css" . | safeCSS }}
-{{ with .Site.Params.fontfamily }} body { font-family: {{ . | safeCSS }}; } {{ end }}
-{{ with .Site.Params.logofontfamily }} .h-logo { font-family: {{ . | safeCSS }}; } {{ end }}
+      {{ partial "styles.css" . | safeCSS }}
+      {{ partial "custom.css" . | safeCSS }}
     </style>
-
+<!--
 <meta name="robots" content="noindex">
 <meta name="robots" content="nofollow">
 <meta name="robots" content="noarchive">
-
+-->
   </head>
 
   <body>

@@ -12,21 +12,19 @@
     {{ else }}
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     {{ end }}
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
     {{ block "meta" . }}{{ end }}
     <style amp-custom>
-{{ partial "styles.css" . | safeCSS }}
-{{ partial "custom.css" . | safeCSS }}
-{{ with .Site.Params.fontfamily }} body { font-family: {{ . | safeCSS }}; } {{ end }}
-{{ with .Site.Params.logofontfamily }} .h-logo { font-family: {{ . | safeCSS }}; } {{ end }}
-.l-container { max-width: 40rem; margin: 0 auto; }
+      {{ partial "styles.css" . | safeCSS }}
+      {{ partial "custom.css" . | safeCSS }}
     </style>
-
+<!--
 <meta name="robots" content="noindex">
 <meta name="robots" content="nofollow">
 <meta name="robots" content="noarchive">
-
+-->
   </head>
 
   <body>

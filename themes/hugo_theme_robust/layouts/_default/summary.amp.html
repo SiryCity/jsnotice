@@ -1,0 +1,91 @@
+<article class='article'>
+  <header class='article__header'>
+
+    <time class='article__header__date' datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
+      {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+    </time>
+
+    {{ $params := .Params }}
+    {{ range $key, $value := $.Site.Taxonomies }}
+      {{ if isset $params $key }}
+        {{ range (index $params $key) }}
+          <a class='article__header__tag article__header__tag--{{.}}' href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    <h1 class='article__header__title'>{{ .Title }}</h1>
+    {{ partial "share.html" . }}
+
+  </header>
+
+  <div class='article__markdown'>
+    {{ .Content }}
+  </div>
+
+
+  <footer class='article__footer'>
+    <div class='article__footer__button-wrapper'>
+      {{ with .Next }}
+        <a class='article__footer__button' href="{{ .Permalink }}">
+          ← PREV
+        </a>
+      {{ end }}
+    </div>
+    <a class='article__footer__button' href="{{ .Site.BaseURL }}/amp">
+      TOP
+    </a>
+    <div class='article__footer__button-wrapper'>
+      {{ with .Prev }}
+        <a class='article__footer__button' href="{{ .Permalink }}">
+          NEXT →
+        </a>
+      {{ end }}
+    </div>
+  </footer>
+
+  {{ with .Next }}
+    <article class='article__pagenation__latest-area'>
+      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+    
+        <span class='article__pagenation__latest-area__tags'>
+          PREV
+        </span>
+    
+        <br>
+    
+        <time class='article__pagenation__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
+          {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+        </time>
+    
+        <div class='article__pagenation__latest-area__title'>
+          {{ .Title }}
+        </div>
+          
+      </a>
+    </article>
+  {{ end }}
+
+  {{ with .Prev }}
+    <article class='article__pagenation__latest-area'>
+      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+    
+        <span class='article__pagenation__latest-area__tags'>
+          NEXT
+        </span>
+    
+        <br>
+    
+        <time class='article__pagenation__latest-area__time' datetime="{{ .Date.Format "2007-01-02T15:04:05JST" }}">
+          {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+        </time>
+    
+        <div class='article__pagenation__latest-area__title'>
+          {{ .Title }}
+        </div>
+          
+      </a>
+    </article>
+  {{ end }}
+    
+</article>
