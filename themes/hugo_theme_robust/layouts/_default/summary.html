@@ -46,7 +46,7 @@
 
   {{ with .Next }}
     <article class='article__pagenation__latest-area'>
-      <a class='article__pagenation__latest-area__link thumb-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
     
         <span class='article__pagenation__latest-area__tags'>
           PREV
@@ -68,7 +68,7 @@
 
   {{ with .Prev }}
     <article class='article__pagenation__latest-area'>
-      <a class='article__pagenation__latest-area__link thumb-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
     
         <span class='article__pagenation__latest-area__tags'>
           NEXT

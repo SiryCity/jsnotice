@@ -2,7 +2,7 @@ baseURL = "https://hugoamp.netlify.com/"
 languageCode = "ja"
 title = "JavaScriptに関するお知らせ"
 theme = "hugo_theme_robust"
-paginate = 21
+paginate = 20
 
 # googleAnalytics = "UA-137716392-1"
 
