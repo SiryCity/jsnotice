@@ -1,9 +1,0 @@
-
-{{ range $p := .Site.RegularPages }}
-  {{ with $p.Params.thumbnail }}
-    .image-{{ $p.File.UniqueID }} {
-      background-image: url({{ . | absURL }});
-    }
-  {{ end }}
-{{ end }}
-

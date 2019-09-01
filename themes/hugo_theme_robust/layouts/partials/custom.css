@@ -61,8 +61,10 @@ a {
   box-shadow: 1px 1px 4px 1px rgba(0,0,0,.1);
   box-sizing: border-box;
   padding: 40px;
+  transition-duration: .1s;
+  transition-property: padding;
 }
-@media (max-width: 675px) {
+@media (max-width: 785px) {
   #main{
     padding: 0;
   }
@@ -78,8 +80,10 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    transition-duration: .1s;
+    transition-property: padding;
   }
-  @media (max-width: 675px) {
+  @media (max-width: 785px) {
     #main__inner{
       padding: 0;
     }
@@ -88,14 +92,18 @@ a {
     /* メイン左側と右側 */
     #main__inner__inner-left{
       width: calc(100% - 330px - 15px); 
+      transition-duration: .1s;
+      transition-property: width;
     }
     #main__inner__inner-right{
       width: 330px;
+      transition-duration: .1s;
+      transition-property: width;
     }
     #main__inner__inner-top{
       width: 100%;
     }
-    @media (max-width: 675px) {
+    @media (max-width: 785px) {
       #main__inner__inner-left,
       #main__inner__inner-right{
         width: 100%;
@@ -115,8 +123,10 @@ a {
   height: 390px;
   background: #0073c2;
   border-radius: 5px;
+  transition-duration: .1s;
+  transition-property: height;
 }
-@media (max-width: 675px) {
+@media (max-width: 785px) {
   .inner-top__ad-area{
     height: 185px;
   }
@@ -144,8 +154,10 @@ a {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+  transition-duration: .1s;
+  transition-property: margin-bottom;
 }
-@media (max-width: 675px) {
+@media (max-width: 785px) {
   .inner-block{
     margin-bottom: 0;
   }
@@ -339,6 +351,14 @@ a {
         margin-top: -4.5px;
       }
   .article__markdown{
+    min-height: 1085px;
+    transition-duration: .1s;
+    transition-property: min-height;
+  }
+  @media (max-width: 785px) {
+    .article__markdown{
+      min-height: 100vh;
+    }
   }
     .article__markdown > h2{
       color: #18375A;
@@ -361,6 +381,7 @@ a {
       padding: 20px 10px;
       box-sizing: border-box;
       font-size: 14px;
+      margin-bottom: 100px;
     }
     .article__markdown code{
       background: #eee;
@@ -378,6 +399,7 @@ a {
       .article__markdown ol{
         counter-reset: olli;
         list-style-type: none;
+        padding-left: 0;
       }
       .article__markdown ol :before{
         counter-increment: olli;
@@ -388,6 +410,7 @@ a {
       }
       .article__markdown ul{
         list-style-type: none;
+        padding-left: 0;
       }
       .article__markdown ul :before{
         content: '●';
@@ -501,8 +524,10 @@ a {
   height: 143px;
   box-sizing: border-box;
   border: 1px solid #D1D7DE;
+  transition-duration: .1s;
+  transition-property: margin;
 }
-@media (max-width: 675px) {
+@media (max-width: 785px) {
   .inner-right__profile-area{
     margin: 0 auto;
   }
