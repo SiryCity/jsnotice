@@ -7,8 +7,8 @@ paginate = 20
 # googleAnalytics = "UA-137716392-1"
 
 [outputs]
-home = [ "HTML", "AMP" ]
-page = [ "HTML", "AMP" ]
+  home = [ "HTML", "AMP" ]
+  page = [ "HTML", "AMP" ]
 
 
 [params]
