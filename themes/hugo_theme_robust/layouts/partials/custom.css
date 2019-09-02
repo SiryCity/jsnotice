@@ -376,19 +376,11 @@ a {
       line-height: 150%;
       margin: 15px 0;
     }
-    .article__markdown > pre{
-      background: #322931;
+    .article__markdown pre{
       padding: 20px 10px;
       box-sizing: border-box;
       font-size: 14px;
       margin-bottom: 100px;
-    }
-    .article__markdown code{
-      background: #eee;
-    }
-    .article__markdown pre code{
-      color: #b9b5b8;
-      background: #322931;
     }
     .article__markdown a{
       color: #0099CC;
