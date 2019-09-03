@@ -1,4 +1,4 @@
-baseURL = "https://hugoamp.netlify.com/"
+baseURL = "https://jsnotice.com/"
 languageCode = "ja"
 title = "JavaScriptに関するお知らせ"
 theme = "hugo_theme_robust"
@@ -6,7 +6,7 @@ paginate = 20
 pygmentsUseClasses = true
 pygmentsCodefences = true
 
-# googleAnalytics = "UA-137716392-1"
+googleAnalytics = "UA-137716392-1"
 
 [outputs]
   home = [ "HTML", "AMP" ]
