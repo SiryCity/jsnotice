@@ -58,8 +58,7 @@ body{
   box-shadow: 1px 1px 4px 1px rgba(0,0,0,.1);
   box-sizing: border-box;
   padding: 40px;
-  transition-duration: .1s;
-  transition-property: padding;
+  transition: padding .1s;
 }
 @media (max-width: 785px) {
   #main{
@@ -77,8 +76,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    transition-duration: .1s;
-    transition-property: padding;
+    transition: padding .1s;
   }
   @media (max-width: 785px) {
     #main__inner{
@@ -88,14 +86,12 @@ body{
     /* 645px 15px 330px */
     /* メイン左側と右側 */
     #main__inner__inner-left{
-      width: calc(100% - 330px - 15px); 
-      transition-duration: .1s;
-      transition-property: width;
+      width: calc(100% - 330px - 15px);
+      transition: width .1s;
     }
     #main__inner__inner-right{
       width: 330px;
-      transition-duration: .1s;
-      transition-property: width;
+      transition: width .1s;
     }
     #main__inner__inner-top{
       width: 100%;
@@ -115,20 +111,19 @@ body{
 
 
 /* トップ上部のスペース */
-.inner-top__ad-area{
+#inner-top__ad-area{
   width: 100%;
   height: 390px;
   background: #0073c2;
   border-radius: 5px;
-  transition-duration: .1s;
-  transition-property: height;
+  transition: height .1s;
 }
 @media (max-width: 785px) {
-  .inner-top__ad-area{
+  #inner-top__ad-area{
     height: 185px;
   }
 }
-.inner-top__bread-crumb-area{
+#inner-top__bread-crumb-area{
   width: 100%;
   height: 95px;
   background: #0073c2;
@@ -136,11 +131,11 @@ body{
   padding: 10px 15px;
   box-sizing: border-box;
 }
-.inner-top__bread-crumb-area__bread-crumb{
-  color: white;
-  font-size: 12px;
-  margin-right: 3px;
-}
+  .inner-top__bread-crumb-area__bread-crumb{
+    color: white;
+    font-size: 12px;
+    margin-right: 3px;
+  }
 
 /* 一つのコンテンツのブロック */
 .inner-block{
@@ -151,8 +146,7 @@ body{
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
-  transition-duration: .1s;
-  transition-property: margin-bottom;
+  transition: margin-bottom .1s;
 }
 @media (max-width: 785px) {
   .inner-block{
@@ -166,14 +160,23 @@ body{
     line-height: 26px;
     border-bottom: 2.2px solid #0475C2;
     font-family: serif;
-    font-weight: bold;
     display: inline-block;
     letter-spacing: -.5px;
     margin-bottom: 8px;
+    position: relative;
   }
   .inner-block__title::first-letter{
     font-size: 36px;
   }
+    .inner-block__title__kana{
+      position: absolute;
+      right: 0;
+      top: -9px;
+      font-family: 'Gothic';
+      letter-spacing: 0;
+      font-size: 8px;
+      color: #555;
+    }
 
 /* ホームの左側の記事一覧の1つ分 */
 .inner-left__post-area{
@@ -241,7 +244,7 @@ body{
   }
 
 /* ページネーション */
-.inner-left__pagenation-area{
+#inner-left__pagenation-area{
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -362,96 +365,71 @@ body{
         font-size: 22px;
         margin-top: -4.5px;
       }
-  .article__markdown{
+  #article__markdown{
     min-height: 1085px;
-    transition-duration: .1s;
-    transition-property: min-height;
+    transition: min-height .1s;
   }
-  @media (max-width: 785px) {
-    .article__markdown{
-      min-height: 100vh;
-    }
-  }
-    .article__markdown > h2{
+    #article__markdown > h2{
       color: #18375A;
       font-size: 20px;
       margin: 100px 0 20px;
     }
-    .article__markdown > h3{
+    #article__markdown > h3{
       color: #18375A;
       font-size: 20px;
       margin: 100px 0 20px;
     }
-    .article__markdown > p,
-    .article__markdown li{
-      font-size: 13px;
+    #article__markdown > p,
+    #article__markdown li{
+      font-size: 14px;
       line-height: 150%;
       margin: 15px 0;
     }
-    .article__markdown pre{
+    #article__markdown pre{
       padding: 20px 10px;
       box-sizing: border-box;
       font-size: 14px;
       margin-bottom: 100px;
+      box-sizing: border-box;
     }
-    .article__markdown a{
+    #article__markdown a{
       color: #0099CC;
       text-decoration: none;
     }
-    .article__markdown a:hover{
+    #article__markdown a:hover{
       text-decoration: underline;
     }
-      .article__markdown ol{
+      #article__markdown ol{
         counter-reset: olli;
         list-style-type: none;
         padding-left: 0;
       }
-      .article__markdown ol :before{
+      #article__markdown ol :before{
         counter-increment: olli;
         content: counter(olli)'.';
         padding-right: 5px;
         font-weight: bold;
         color: #0073c2;
       }
-      .article__markdown ul{
+      #article__markdown ul{
         list-style-type: none;
         padding-left: 0;
       }
-      .article__markdown ul :before{
+      #article__markdown ul :before{
         content: '●';
         padding-right: 5px;
         font-weight: bold;
         color: #0073c2;
       }
-      .article__markdown em,
-      .article__markdown strong{
+      #article__markdown em,
+      #article__markdown strong{
         background:linear-gradient(transparent 80%, #0099CC 20%);
         display:inline-block;
       }
-      .article__markdown blockquote{
+      #article__markdown blockquote{
         border-left: 5px solid #ddd;
         padding-left: 10px;
       }
-
-    .hljs{
-      font-family: monospace;
-      line-height: 180%;
-    }
-    .hljs-number{
-      color: #fd8b19;
-    }
-    .hljs-params{
-      color: #fd8b19;
-    }
-    .hljs-keyword{
-      color: #c85e7c;
-    }
-    .hljs-title{
-      color: #1290bf;
-    }
-    .hljs-function{
-      color: #1290bf;
-    }
 
   .article__footer{
     width: 100%;
@@ -531,8 +509,7 @@ body{
   height: 143px;
   box-sizing: border-box;
   border: 1px solid #D1D7DE;
-  transition-duration: .1s;
-  transition-property: margin;
+  transition: margin .1s;
 }
 @media (max-width: 785px) {
   .inner-right__profile-area{
@@ -608,11 +585,17 @@ body{
   }
 
 /* タグ */
+  #inner-right__tag-wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
   .inner-right__tag-area{
-    width: calc(50% - 3px);
+    width: calc(50% - 2.5px);
     height: 50px;
-    display: inline-block;
-    margin: 5px 0;
+    margin-bottom: 5px;
     color: white;
     font-size: 16px;
     display: inline-flex;

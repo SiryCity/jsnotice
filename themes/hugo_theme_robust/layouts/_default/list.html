@@ -6,7 +6,7 @@
     <!--
     <div id='main__inner__inner-top'>
       <div class='inner-block'>
-        <div class='inner-top__ad-area'>
+        <div id='inner-top__ad-area'>
 
         </div>
       </div>
@@ -25,7 +25,12 @@
 
       <!-- 記事一覧 -->
       <div class='inner-block'>
-        <header class='inner-block__title'>INFORMATION</header>
+        <header class='inner-block__title'>
+          INFORMATION
+          <div class='inner-block__title__kana'>
+            インフォメーション
+          </div>
+        </header>
         <!-- 記事リンク一覧 -->
         {{ range (.Paginate .Site.RegularPages).Pages }}
           {{ .Render "li" }}
@@ -35,7 +40,12 @@
       </div>
 
       <div class='inner-block'>
-        <header class='inner-block__title'>LINK</header>
+        <header class='inner-block__title'>
+          LINK
+          <div class='inner-block__title__kana'>
+            リンク
+          </div>
+        </header>
         <br>
         {{ with .Site.Params.author }}
           {{ with .facebook }}<a class='inner-left__link-area' href="{{ . }}" rel="nofollow" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>{{ end }}
