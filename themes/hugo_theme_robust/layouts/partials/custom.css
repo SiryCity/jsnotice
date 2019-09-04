@@ -246,7 +246,6 @@ body{
   display: flex;
   justify-content: space-between;
   margin: 35px 0 10px;
-
 }
   .inner-left__pagenation-area__button{
     width: 65px;
@@ -263,6 +262,7 @@ body{
 /* リンク */
 .inner-left__link-area{
   width: 195px;
+  max-width: calc(50% - 7.5px);
   height: 74.69px;
   line-height: 74.69px;
   display: inline-block;
@@ -272,7 +272,15 @@ body{
   border: 1px solid #ccc;
   text-align: center;
   font-size: 36px;
-  margin: 0 7.5px 7px 0;
+  margin-bottom: 7px;
+}
+.inner-left__link-area--twi{
+  margin-right: 7.5px;
+}
+@media (max-width: 785px) {
+  .inner-left__link-area{
+    width: calc(50% - 7.5px);
+  }
 }
 
 /* 記事ページ */
@@ -600,40 +608,40 @@ body{
   }
 
 /* タグ */
-.inner-right__tag-area{
-  width: 147px;
-  height: 50px;
-  display: inline-block;
-  margin: 5px 0;
-  color: white;
-  font-size: 16px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-  .inner-right__tag-area--javascript{
-    background: #FF85AD;
+  .inner-right__tag-area{
+    width: calc(50% - 3px);
+    height: 50px;
+    display: inline-block;
+    margin: 5px 0;
+    color: white;
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
-  .inner-right__tag-area--css{
-    background: #FF9900;
-  }
-  .inner-right__tag-area--python{
-    background: #787FDC;
-  }
-  .inner-right__tag-area--html{
-    background: #E5457D;
-  }
-  .inner-right__tag-area--math{
-    background: #56BF00;
-  }
-  .inner-right__tag-area--others{
-    background: #BA3CB8;
-  }
+    .inner-right__tag-area--javascript{
+      background: #FF85AD;
+    }
+    .inner-right__tag-area--css{
+      background: #FF9900;
+    }
+    .inner-right__tag-area--python{
+      background: #787FDC;
+    }
+    .inner-right__tag-area--html{
+      background: #E5457D;
+    }
+    .inner-right__tag-area--math{
+      background: #56BF00;
+    }
+    .inner-right__tag-area--others{
+      background: #BA3CB8;
+    }
 
-  .inner-right__tag-area__name{
-    margin-left: 5px;
-  }
+    .inner-right__tag-area__name{
+      margin-left: 5px;
+    }
 
 
 /* フッター */
