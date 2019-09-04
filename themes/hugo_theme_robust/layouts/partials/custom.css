@@ -17,10 +17,6 @@ body{
   {{ end }}
 {{ end }}
 
-/* 共通 */
-a {
-  text-decoration: none;
-}
 /* ヘッダー */
 #header{
   width: 100%;
@@ -35,6 +31,7 @@ a {
   #header__link{
     width: 100%;
     height: 110px;
+    text-decoration: none;
   }
     #header__link__title{
       font-size: 26px;
@@ -186,6 +183,9 @@ a {
   padding: 5px 0;
   margin: 0;
 }
+  .inner-left__post-area__link{
+    text-decoration: none;
+  }
   .inner-left__post-area__date{
     width: 87px;
     height: 14px;
@@ -205,6 +205,7 @@ a {
     color: #fff;
     font-size: 12px;
     display: inline-block;
+    text-decoration: none;
   }
 
   .inner-left__post-area__tag--JavaScript{
@@ -256,6 +257,7 @@ a {
     font-size: 10px;
     color: white;
     display: block;
+    text-decoration: none;
   }
 
 /* リンク */
@@ -297,6 +299,7 @@ a {
       color: #fff;
       font-size: 12px;
       display: inline-block;
+      text-decoration: none;
     }
     .article__header__tag--JavaScript{
       background: #FF85AD;
@@ -336,6 +339,7 @@ a {
         margin-left: 4px;
         font-size: 12px;
         box-sizing: border-box;
+        text-decoration: none;
       }
       .article__header__shared-button--fb{
         background: #4267B2;
@@ -384,6 +388,7 @@ a {
     }
     .article__markdown a{
       color: #0099CC;
+      text-decoration: none;
     }
     .article__markdown a:hover{
       text-decoration: underline;
@@ -458,6 +463,7 @@ a {
       font-size: 10px;
       color: white;
       display: block;
+      text-decoration: none;
     }
     .article__footer__button-wrapper{
       width: 65px;
@@ -476,6 +482,7 @@ a {
         background-position: left top;
         background-size: 60px 60px;
         position: relative;
+        text-decoration: none;
       }
       .article__pagenation__latest-area__link:hover{
         background-color: rgba(0, 153, 204, .1);
@@ -557,6 +564,7 @@ a {
     background-position: left top;
     background-size: 60px 60px;
     position: relative;
+    text-decoration: none;
   }
 
   .inner-right__latest-area__link:hover{
@@ -602,6 +610,7 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
   .inner-right__tag-area--javascript{
     background: #FF85AD;
