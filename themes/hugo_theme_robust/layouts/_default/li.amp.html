@@ -1,0 +1,35 @@
+<!-- ホームの左側の記事一覧の1つ分 -->
+<article class='inner-left__post-area'>
+  <a class='inner-left__post-area__link' href='{{ .Permalink }}'>
+  
+    <time class='inner-left__post-area__date' datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
+      {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
+    </time>
+    
+    {{ $params := .Params }}
+    {{ range $key, $value := $.Site.Taxonomies }}
+      {{ if isset $params $key }}
+        {{ range (index $params $key) }}
+          <span class='inner-left__post-area__tag inner-left__post-area__tag--{{.}}' >{{ . }}</span>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if eq (getenv "HUGO_ENV") "DEV" }}
+      <span>
+        {{ .WordCount }} Words
+      </span>
+      {{ if .IsDraft }}
+        <span style="color: #2196f3;">
+          DRAFT
+        </span>
+      {{ end }}
+    {{ end }}
+    
+    <br/>
+    
+    <h2 class='inner-left__post-area__title'>
+      {{ .Title }}
+    </h2>
+  </a>
+</article>
