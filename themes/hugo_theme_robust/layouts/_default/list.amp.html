@@ -32,7 +32,7 @@
           </div>
         </header>
         <!-- 記事リンク一覧 -->
-        {{ range (.Paginate .Site.RegularPages).Pages }}
+        {{ range (.Paginate .Data.Pages).Pages }}
           {{ .Render "li" }}
         {{ end }}
         <!-- 次(前)のページ -->
