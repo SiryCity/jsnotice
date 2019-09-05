@@ -31,8 +31,7 @@
             インフォメーション
           </div>
         </header>
-        <!-- 記事リンク一覧 -->
-        {{ range (.Paginate .Data.Pages).Pages }}
+        {{ range (.Paginator 30).Pages }}
           {{ .Render "li" }}
         {{ end }}
         <!-- 次(前)のページ -->

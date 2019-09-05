@@ -232,7 +232,7 @@ body{
   
   .inner-left__post-area__title{
     display: inline-block;
-    line-height: 12px;
+    line-height: 14px;
     color: #0099CC;
     font-size: 12px;
     font-weight: normal;
@@ -366,7 +366,7 @@ body{
         margin-top: -4.5px;
       }
   #article__markdown{
-    min-height: 1085px;
+    min-height: 100vh;
     transition: min-height .1s;
   }
     #article__markdown > h2{
