@@ -36,10 +36,11 @@
         <header class='inner-block__title'>
           INFORMATION
           <div class='inner-block__title__kana'>
+            <!--インフォメーション-->
           </div>
         </header>
         {{ range (.Paginator 30).Pages }}
-          {{ .Render "li" }}
+          {{ .Render "liamp" }}
         {{ end }}
         <!-- 次(前)のページ -->
         <!-- {{ partial "pagination.html" . }} -->
