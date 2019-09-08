@@ -1,6 +1,7 @@
 <!-- ホームの左側の記事一覧の1つ分 -->
 <article class='inner-left__post-area'>
-  <a class='inner-left__post-area__link' href='{{ .Permalink }}'>
+  <!--<a class='inner-left__post-area__link' href='{{ .Permalink }}'>-->
+  <a class='inner-left__post-area__link' href='{{ replace .Permalink "posts" "amp/posts" }}'>
   
     <time class='inner-left__post-area__date' datetime="{{ .Date.Format "2006-01-02T15:04:05JST" }}">
       {{ .Date.Format ( .Site.Params.dateformat | default "Jan 2, 2006") }}
@@ -29,7 +30,7 @@
     <br/>
     
     <h2 class='inner-left__post-area__title'>
-      {{ .Title }} .
+      {{ .Title }}
     </h2>
   </a>
 </article>
