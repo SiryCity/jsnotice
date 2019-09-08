@@ -27,6 +27,14 @@
     </div>
   </div>
 
+  <!-- 2カラム 左側 -->
+  <div id="main__inner__inner-left--amp">
+    <div class='inner-block'>
+      {{ .Render "summary.amp" }}
+      <!-- {{ .Render "summary" }} -->
+    </div>
+  </div>
+
   <amp-ad width="100vw" height=320
       type="adsense"
       data-ad-client="ca-pub-7034999423632409"
@@ -35,14 +43,6 @@
       data-full-width>
     <div overflow></div>
   </amp-ad>
-
-  <!-- 2カラム 左側 -->
-  <div id="main__inner__inner-left--amp">
-    <div class='inner-block'>
-      {{ .Render "summary.amp" }}
-      <!-- {{ .Render "summary" }} -->
-    </div>
-  </div>
 
   <!-- 2カラム 右側 -->
   <div id="main__inner__inner-right--amp">
