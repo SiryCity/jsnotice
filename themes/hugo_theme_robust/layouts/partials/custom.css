@@ -371,18 +371,21 @@ body{
   }
     #article__markdown > h2{
       color: #18375A;
-      background: #efefef;
+      background: #ddd;
       font-size: 20px;
-      margin: 100px 0 15px;
-      padding: 10px 3px 25px;
+      margin: 80px 0 15px;
+      padding: 15px 3px;
+      border-bottom: 3px #18375A solid;
     }
     #article__markdown > h3{
+      max-width: 100%;
       color: #18375A;
-      background: #efefef;
+      border-bottom: 3px #666 solid;
       font-size: 20px;
-      margin: 100px 0 20px;
-      padding: 5px 3px;
+      margin: 80px 0 15px;
+      padding: 5px 25px 5px 3px;
       display: inline-block;
+      box-sizing: border-box;
     }
     #article__markdown > p,
     #article__markdown li{
