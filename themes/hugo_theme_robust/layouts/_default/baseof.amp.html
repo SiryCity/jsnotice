@@ -27,9 +27,6 @@
   </head>
 
   <body>
-    <amp-auto-ads type="adsense"
-      data-ad-client="ca-pub-7034999423632409">
-    </amp-auto-ads>
     {{ if ne (getenv "HUGO_ENV") "DEV" }}
     <amp-analytics type="googleanalytics" id="analytics1">
       <script type="application/json"> { "vars": { "account": {{ .Site.GoogleAnalytics }}}, "triggers": { "trackPageview": { "on": "visible", "request": "pageview" } } }
