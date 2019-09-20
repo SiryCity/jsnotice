@@ -1,5 +1,5 @@
 <article class='inner-right__latest-area'>
-  <a class='inner-right__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+  <a class='inner-right__latest-area__link image-{{ .File.UniqueID }}' href='{{ replace .Permalink "posts" "amp/posts" }}'>
 
     {{ $params := .Params }}
     {{ range $key, $value := $.Site.Taxonomies }}
