@@ -36,7 +36,7 @@
   <footer class='article__footer'>
     <div class='article__footer__button-wrapper'>
       {{ with .Next }}
-        <a class='article__footer__button' href="{{ .Permalink }}">
+        <a class='article__footer__button' href='{{ replace .Permalink "posts" "amp/posts" }}'>
           ← PREV
         </a>
       {{ end }}
@@ -46,7 +46,7 @@
     </a>
     <div class='article__footer__button-wrapper'>
       {{ with .Prev }}
-        <a class='article__footer__button' href="{{ .Permalink }}">
+        <a class='article__footer__button' href='{{ replace .Permalink "posts" "amp/posts" }}'>
           NEXT →
         </a>
       {{ end }}
@@ -55,7 +55,7 @@
 
   {{ with .Next }}
     <article class='article__pagenation__latest-area'>
-      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href='{{ replace .Permalink "posts" "amp/posts" }}'>
     
         <span class='article__pagenation__latest-area__tags'>
           PREV
@@ -77,7 +77,7 @@
 
   {{ with .Prev }}
     <article class='article__pagenation__latest-area'>
-      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href="{{ .Permalink }}">
+      <a class='article__pagenation__latest-area__link image-{{ .File.UniqueID }}' href='{{ replace .Permalink "posts" "amp/posts" }}'>
     
         <span class='article__pagenation__latest-area__tags'>
           NEXT
