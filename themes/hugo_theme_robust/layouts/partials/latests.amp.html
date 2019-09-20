@@ -1,0 +1,3 @@
+{{ range $i, $p := (first 10 .Site.RegularPages) }}
+  {{ .Render "li_latests.amp" }}
+{{ end }}
