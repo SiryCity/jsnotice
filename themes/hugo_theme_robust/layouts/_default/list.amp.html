@@ -1,4 +1,4 @@
-{{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ end }}
+{{ define "title" }}{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ end }}
 
 {{ define "main" }}
 
@@ -12,6 +12,8 @@
       </div>
     </div>
     -->
+
+    <!-- 固定広告 上側 -->
     <amp-ad width="100vw" height=320
         type="adsense"
         data-ad-client="ca-pub-7034999423632409"
@@ -39,6 +41,7 @@
             <!--インフォメーション-->
           </div>
         </header>
+        <!-- ホームから個別記事へ飛ぶリンク一覧 -->
         {{ range (.Paginator 30).Pages }}
           {{ .Render "li.amp" }}
         {{ end }}
@@ -46,6 +49,7 @@
         <!-- {{ partial "pagination.html" . }} -->
       </div>
 
+      <!-- 固定広告 左下側 -->
       <amp-ad width="100vw" height=320
           type="adsense"
           data-ad-client="ca-pub-7034999423632409"
@@ -55,6 +59,7 @@
         <div overflow></div>
       </amp-ad>
     
+      <!-- SNSへのリンク -->
       <div class='inner-block'>
         <header class='inner-block__title'>
           LINK

@@ -2,7 +2,7 @@
 
 {{ define "meta" }}
 {{ range .AlternativeOutputFormats }}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end }}
 {{ partial "single_meta.html" . }}
 {{ partial "single_json_ld.html" . }}
@@ -31,9 +31,18 @@
   <div id="main__inner__inner-left">
     <div class='inner-block'>
       {{ .Render "summary" }}
-      <!-- {{ .Render "summary" }} -->
     </div>
   </div>
+
+  <!-- 広告 左下側 -->
+
+
+
+
+
+
+
+
 
   <!-- 2カラム 右側 -->
   <div id="main__inner__inner-right">
