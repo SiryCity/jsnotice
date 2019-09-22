@@ -365,6 +365,29 @@ body{
         font-size: 22px;
         margin-top: -4.5px;
       }
+  #TableOfContents{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 3px 0;
+    font-size: 14px;
+  }
+  #TableOfContents > ul{
+    padding-left: 0
+  }
+  #TableOfContents ul{
+    list-style-type: none;
+    display: inline-block;
+  }
+  #TableOfContents a{
+    text-decoration: none;
+    display: block;
+    color: #0099CC;
+  }
+  #TableOfContents a:hover{
+    text-decoration: underline;
+  }
+
   #article__markdown{
     min-height: 100vh;
     transition: min-height .1s;

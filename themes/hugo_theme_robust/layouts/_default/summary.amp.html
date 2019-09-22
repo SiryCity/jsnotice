@@ -28,6 +28,10 @@
     <div overflow></div>
   </amp-ad>
 
+  {{- with .TableOfContents }}
+    {{ . }}
+  {{- end }}
+
   <div id='article__markdown'>
     {{ .Content }}
   </div>
