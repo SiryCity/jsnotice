@@ -460,8 +460,9 @@ body{
       }
       #article__markdown em,
       #article__markdown strong{
-        background:linear-gradient(transparent 80%, #0099CC 20%);
+        height : 18px;
         display:inline-block;
+        border-bottom: solid 5px #0099CC;
       }
       #article__markdown blockquote{
         border-left: 5px solid #ddd;
