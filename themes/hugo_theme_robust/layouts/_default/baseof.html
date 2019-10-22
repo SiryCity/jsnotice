@@ -22,13 +22,23 @@
       {{ partial "syntax.css" . | safeCSS }}
     </style>
 
-    <script data-ad-client="ca-pub-7034999423632409" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-7034999423632409"
+      async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    </script>
   </head>
 
   <body>
+
+
+
+
     {{ if ne (getenv "HUGO_ENV") "DEV" }}
     {{ template "_internal/google_analytics.html" . }}
     {{ end }}
+
+
+
+
 
     <!-- ヘッダー -->
     <header id='header'>
