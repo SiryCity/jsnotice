@@ -28,9 +28,6 @@
   </head>
 
   <body>
-    <amp-auto-ads type="adsense"
-      data-ad-client="ca-pub-7034999423632409">
-    </amp-auto-ads>
 
     {{ if ne (getenv "HUGO_ENV") "DEV" }}
     <amp-analytics type="googleanalytics" id="analytics1">
@@ -38,7 +35,6 @@
       </script>
     </amp-analytics>
     {{ end }}
-
 
     <!-- ヘッダー -->
     <header id='header'>
@@ -72,6 +68,10 @@
         <a class='footer__links' href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a class='footer__links' href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
       </aside>
     </footer>
+
+    <amp-auto-ads type="adsense"
+      data-ad-client="ca-pub-7034999423632409">
+    </amp-auto-ads>
 
   </body>
 </html>
